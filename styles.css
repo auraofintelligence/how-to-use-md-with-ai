@@ -708,6 +708,7 @@ select {
 .audience-strip p,
 .explainer-grid p,
 .scene-copy p,
+.scene-board p,
 .journey-rail p,
 .ecosystem-grid p,
 .p4a-note p,
@@ -840,7 +841,10 @@ select {
 }
 
 .straddie-scene {
-  max-width: 880px;
+  display: grid;
+  grid-template-columns: minmax(280px, .78fr) minmax(0, 1.22fr);
+  gap: 1.4rem;
+  align-items: center;
   padding: .5rem 0 5rem;
 }
 
@@ -851,14 +855,61 @@ select {
   line-height: 1;
 }
 
-.filename-note {
-  margin-top: 1.1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
+.scene-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(95, 216, 255, .1), transparent 46%),
+    linear-gradient(315deg, rgba(255, 209, 102, .1), transparent 52%),
+    rgba(255, 255, 255, .025);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .2);
+  overflow: hidden;
 }
 
-.filename-note code {
+.scene-line {
+  position: absolute;
+  inset: 50% 2rem auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(95, 216, 255, .58), rgba(255, 209, 102, .58), transparent);
+}
+
+.scene-board article {
+  position: relative;
+  min-height: 164px;
+  padding: .95rem;
+  border: 1px solid rgba(166, 232, 255, .2);
+  border-radius: var(--radius);
+  background: rgba(4, 13, 20, .68);
+}
+
+.scene-board article:nth-of-type(2) {
+  border-color: rgba(255, 209, 102, .3);
+}
+
+.scene-board article:nth-of-type(4) {
+  border-color: rgba(98, 246, 165, .26);
+}
+
+.scene-board span {
+  display: block;
+  margin-bottom: .35rem;
+  color: var(--cyan);
+  font-family: var(--heading);
+  font-size: .82rem;
+  font-weight: 900;
+}
+
+.scene-board strong {
+  display: block;
   color: var(--gold);
+  font-family: "Cascadia Mono", "Consolas", monospace;
+  font-size: clamp(.9rem, 1.15vw, 1.05rem);
+  overflow-wrap: anywhere;
 }
 
 .journey-rail {
@@ -1218,6 +1269,7 @@ textarea:focus {
   .plain-word-grid,
   .choice-grid,
   .explainer-grid,
+  .scene-board,
   .journey-rail,
   .ecosystem-grid,
   .link-board {
@@ -1274,6 +1326,7 @@ textarea:focus {
   .plain-word-grid,
   .choice-grid,
   .explainer-grid,
+  .scene-board,
   .journey-rail,
   .ecosystem-grid,
   .link-board,
@@ -1310,10 +1363,15 @@ textarea:focus {
   .audience-strip article,
   .choice-card,
   .explainer-grid article,
+  .scene-board article,
   .journey-rail article,
   .ecosystem-grid article,
   .link-tile {
     min-height: auto;
+  }
+
+  .scene-line {
+    display: none;
   }
 
   .civic-closing {

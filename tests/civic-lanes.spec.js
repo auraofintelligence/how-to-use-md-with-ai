@@ -15,7 +15,7 @@ const realStarterFilenames = [
 ];
 
 test.describe("civic lanes page", () => {
-  test("uses real starter Markdown filenames and keeps project links compact", async ({ page }) => {
+  test("uses real starter Markdown filenames in the visual board and keeps project links compact", async ({ page }) => {
     const consoleProblems = [];
     page.on("console", (message) => {
       if (["error", "warning"].includes(message.type())) {
@@ -36,8 +36,8 @@ test.describe("civic lanes page", () => {
       expect(pageText, `${name} should be visible as a real starter example`).toContain(name);
     }
 
-    await expect(page.locator(".scene-board")).toHaveCount(0);
-    await expect(page.locator(".filename-note")).toContainText("Useful real starter filenames");
+    await expect(page.locator(".scene-board")).toHaveCount(1);
+    await expect(page.locator(".scene-board strong")).toHaveText(realStarterFilenames);
     await expect(page.locator(".compact-link-list a")).toHaveCount(10);
 
     const overflowX = await page.evaluate(() => (
