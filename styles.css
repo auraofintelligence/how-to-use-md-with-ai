@@ -708,7 +708,6 @@ select {
 .audience-strip p,
 .explainer-grid p,
 .scene-copy p,
-.scene-board p,
 .journey-rail p,
 .ecosystem-grid p,
 .p4a-note p,
@@ -841,10 +840,7 @@ select {
 }
 
 .straddie-scene {
-  display: grid;
-  grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
-  gap: 1.4rem;
-  align-items: center;
+  max-width: 880px;
   padding: .5rem 0 5rem;
 }
 
@@ -855,51 +851,14 @@ select {
   line-height: 1;
 }
 
-.scene-board {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(135deg, rgba(95, 216, 255, .08), transparent 48%),
-    linear-gradient(315deg, rgba(255, 209, 102, .08), transparent 52%),
-    rgba(255, 255, 255, .025);
-  overflow: hidden;
+.filename-note {
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
 }
 
-.scene-line {
-  position: absolute;
-  inset: 50% 2rem auto;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(95, 216, 255, .58), rgba(255, 209, 102, .58), transparent);
-}
-
-.scene-board article {
-  position: relative;
-  min-height: 156px;
-  padding: .95rem;
-  border: 1px solid rgba(166, 232, 255, .2);
-  border-radius: var(--radius);
-  background: rgba(4, 13, 20, .62);
-}
-
-.scene-board span {
-  display: block;
-  margin-bottom: .35rem;
-  color: var(--cyan);
-  font-family: var(--heading);
-  font-size: .82rem;
-  font-weight: 900;
-}
-
-.scene-board strong {
-  display: block;
-  color: var(--text);
-  font-family: "Cascadia Mono", "Consolas", monospace;
-  font-size: 1rem;
+.filename-note code {
+  color: var(--gold);
 }
 
 .journey-rail {
@@ -967,6 +926,26 @@ select {
   max-width: 740px;
   margin: .35rem 0 1rem;
   color: #d4ecff;
+}
+
+.compact-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem 1rem;
+  padding-top: .7rem;
+  border-top: 1px solid var(--line);
+}
+
+.compact-link-list a {
+  color: var(--cyan);
+  font-family: var(--heading);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.compact-link-list a:hover,
+.compact-link-list a:focus {
+  text-decoration: underline;
 }
 
 .link-board {
@@ -1295,7 +1274,6 @@ textarea:focus {
   .plain-word-grid,
   .choice-grid,
   .explainer-grid,
-  .scene-board,
   .journey-rail,
   .ecosystem-grid,
   .link-board,
@@ -1336,10 +1314,6 @@ textarea:focus {
   .ecosystem-grid article,
   .link-tile {
     min-height: auto;
-  }
-
-  .scene-line {
-    display: none;
   }
 
   .civic-closing {

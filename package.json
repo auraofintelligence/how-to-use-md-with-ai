@@ -1,0 +1,12 @@
+{
+  "name": "how-to-use-md-with-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static public guide for using Markdown with artificial intelligence tools.",
+  "scripts": {
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.60.0"
+  }
+}
