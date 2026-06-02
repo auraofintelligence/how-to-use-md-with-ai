@@ -14,6 +14,18 @@ const realStarterFilenames = [
   "public_noticeboard.md"
 ];
 
+const ecosystemCardOrder = [
+  "Straddie Maker-Space Lab",
+  "Ballow Road Sand and Screen Hub",
+  "Film Club Documentary Builders",
+  "Straddie Digital Twin Builders",
+  "Stradbroke Grants Lab",
+  "Legal Memory Workbench",
+  "Ready S.E.T. Co-op Trust Hub",
+  "Purple Party for Australia",
+  "Global Association for Joyful Responsible Abundance on Earth public hub"
+];
+
 test.describe("civic lanes page", () => {
   test("uses real starter Markdown filenames in the visual board and keeps project links compact", async ({ page }) => {
     const consoleProblems = [];
@@ -43,7 +55,8 @@ test.describe("civic lanes page", () => {
 
     await expect(page.locator(".scene-board")).toHaveCount(1);
     await expect(page.locator(".scene-board strong")).toHaveText(realStarterFilenames);
-    await expect(page.locator(".compact-link-list a")).toHaveCount(10);
+    await expect(page.locator(".ecosystem-grid h3")).toHaveText(ecosystemCardOrder);
+    await expect(page.locator(".compact-link-list a")).toHaveCount(13);
 
     const overflowX = await page.evaluate(() => (
       document.documentElement.scrollWidth - document.documentElement.clientWidth
