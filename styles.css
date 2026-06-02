@@ -721,6 +721,10 @@ select {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.ecosystem-grid {
+  align-items: start;
+}
+
 .choice-card {
   position: relative;
   display: grid;
@@ -807,13 +811,19 @@ select {
   text-decoration: underline;
 }
 
-.explainer-grid article,
-.ecosystem-grid article {
+.explainer-grid article {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   align-content: start;
   min-height: 250px;
   padding: 1.05rem;
+}
+
+.ecosystem-grid article {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 1rem;
 }
 
 .explainer-grid a,
@@ -827,10 +837,6 @@ select {
   text-decoration: none;
 }
 
-.ecosystem-grid article {
-  min-height: 350px;
-}
-
 .ecosystem-grid article:first-child {
   border-color: rgba(255, 209, 102, .34);
 }
@@ -839,8 +845,7 @@ select {
   display: flex;
   flex-wrap: wrap;
   gap: .55rem 1rem;
-  align-self: end;
-  margin-top: 1rem;
+  margin-top: .9rem;
   padding-top: .8rem;
   border-top: 1px solid rgba(166, 232, 255, .14);
 }
