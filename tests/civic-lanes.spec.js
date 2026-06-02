@@ -15,19 +15,25 @@ const realStarterFilenames = [
 ];
 
 const ecosystemCardOrder = [
-  "Straddie Maker-Space Lab",
-  "Ballow Road Sand and Screen Hub",
-  "Film Club Documentary Builders",
-  "Straddie Digital Twin Builders",
+  "Profile Builder",
+  "Aura Builder",
+  "Straddie Noticeboard Network",
+  "Straddie Shared Table",
+  "Straddie Night Market Lab",
+  "Straddie Disaster Kiosks",
   "Stradbroke Grants Lab",
   "Legal Memory Workbench",
+  "Film Club Documentary Builders",
   "Ready S.E.T. Co-op Trust Hub",
+  "Straddie Digital Twin Builders",
+  "Ballow Road Sand and Screen Hub",
+  "Straddie Maker-Space Lab",
   "Purple Party for Australia",
-  "Global Association for Joyful Responsible Abundance on Earth public hub"
+  "GAJRA Earth public hub"
 ];
 
 test.describe("civic lanes page", () => {
-  test("uses real starter Markdown filenames in the visual board and keeps project links compact", async ({ page }) => {
+  test("uses real starter files and the requested ecosystem card order", async ({ page }) => {
     const consoleProblems = [];
     page.on("console", (message) => {
       if (["error", "warning"].includes(message.type())) {
@@ -56,7 +62,15 @@ test.describe("civic lanes page", () => {
     await expect(page.locator(".scene-board")).toHaveCount(1);
     await expect(page.locator(".scene-board strong")).toHaveText(realStarterFilenames);
     await expect(page.locator(".ecosystem-grid h3")).toHaveText(ecosystemCardOrder);
-    await expect(page.locator(".compact-link-list a")).toHaveCount(13);
+    await expect(page.locator(".ecosystem-grid article")).toHaveCount(15);
+    await expect(page.locator(".ecosystem-grid article .card-actions a")).toHaveCount(30);
+    await expect(page.locator(".civic-links")).toHaveCount(0);
+    await expect(page.locator("body")).not.toContainText("Inside this site");
+    await expect(page.locator("body")).not.toContainText("Related Aura of Intelligence project pages");
+    await expect(page.locator(".strange-true-bridge")).toHaveCount(1);
+    await expect(page.locator(".strange-true-bridge img")).toHaveAttribute("src", "../assets/strange-but-true-banner.webp");
+    await expect(page.locator(".strange-true-bridge")).toContainText("Strange but True");
+    await expect(page.locator(".strange-true-bridge a")).toHaveAttribute("href", "https://auraofintelligence.github.io/strange-but-true/");
 
     const overflowX = await page.evaluate(() => (
       document.documentElement.scrollWidth - document.documentElement.clientWidth

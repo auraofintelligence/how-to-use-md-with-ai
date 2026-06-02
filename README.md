@@ -22,5 +22,5 @@ The builder uses browser-local JavaScript and `localStorage`. It does not send f
 
 The layout borrows the familiar dark civic-tech feel of the Strange But True family, but uses its own favicon and identity.
 
-Generated concept reference: `assets/concept-homepage.png`  
-Generated hero artwork: `assets/md-ai-workbench.webp`
+- Generated concept reference: `assets/concept-homepage.webp`
+- Generated hero artwork: `assets/md-ai-workbench.webp`
