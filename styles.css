@@ -328,6 +328,7 @@ select {
 .section,
 .content-layout,
 .builder-layout,
+.reference-section,
 .resource-grid,
 .article-stack.wide {
   width: min(var(--max-width), calc(100% - 2rem));
@@ -1127,6 +1128,19 @@ textarea:focus {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   padding-bottom: 4rem;
+}
+
+.reference-section {
+  padding-bottom: 4.5rem;
+}
+
+.reference-section .resource-grid {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.reference-section .resource-card h2 {
+  font-size: clamp(1.3rem, 2.3vw, 1.75rem);
 }
 
 .resource-card {
