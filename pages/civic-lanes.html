@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="How Markdown supports private profiles, public noticeboards, game worlds, civic ledgers and braided-economy/P4A records.">
+    <meta name="description" content="A plain-English guide to using Markdown with AI for private profiles, public notices, digital twin avatars, auras, public receipts and grassroots governance.">
     <title>Civic Lanes | How to Use Markdown with AI</title>
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,59 +28,203 @@
     </header>
 
     <main id="main" class="page-main">
-      <section class="page-hero hero-with-media">
+      <section class="page-hero hero-with-media civic-hero">
         <div class="page-hero-copy">
           <a class="back-link" href="../index.html">Back home</a>
-          <h1>Build public and private arenas deliberately.</h1>
-          <p>The principle is simple: private life should stay private, and public power should leave footprints. Markdown helps make that boundary explicit before AI starts remixing the material.</p>
+          <h1>Choose what stays private and what helps the public.</h1>
+          <p>A Markdown file can help artificial intelligence (AI) understand your intent, respect your privacy, and prepare clearer public records. The aim is simple: people keep control of their own story, and public power leaves a trail people can follow.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#choose">Choose a lane</a>
+            <a class="button secondary" href="builder.html">Build a starter file</a>
+          </div>
         </div>
         <figure class="page-hero-media">
           <img src="../assets/civic-lanes-hero.webp" alt="Layered civic architecture map with private, local, public and wider coordination lanes" width="1536" height="864">
         </figure>
       </section>
 
-      <section class="article-stack wide">
-        <article class="lane-detail" id="scale-model">
-          <h2>Roots-up scale model</h2>
-          <p>The P4A architecture reference uses a helpful scale pattern. L0 is the sovereign private node: person, home, household and private property boundary. L1 is the first shared layer: neighbours, clubs, crews, co-ops, care circles and local projects. L2 is the public front: council, regional records, public assets, noticeboards and reviewed public-good claims. L3 and beyond are wider coordination layers such as state, national, international, global or future off-world systems.</p>
-          <p>The layer count is not doctrine. It is a design tool for asking where a file belongs, who controls it, what an agent may read, and what requires permissioned editing, consent, review and correction.</p>
-        </article>
+      <section class="civic-intro" aria-labelledby="plain-words">
+        <div class="section-heading">
+          <h2 id="plain-words">Plain words first</h2>
+          <p>These ideas sound technical until they become everyday choices: write the private note, share the approved summary, publish the notice, keep the receipt.</p>
+        </div>
+        <div class="plain-word-grid">
+          <article>
+            <strong>.md</strong>
+            <h3>Markdown file</h3>
+            <p>A plain text note with headings. It is easy for people to read and easy for AI tools to follow.</p>
+          </article>
+          <article>
+            <strong>AI</strong>
+            <h3>Artificial intelligence</h3>
+            <p>A computer tool that can draft, sort, summarise or compare text when you give it useful context.</p>
+          </article>
+          <article>
+            <strong>Twin</strong>
+            <h3>Digital twin</h3>
+            <p>A helpful digital record of a person, place, project or community asset. It can start as a folder of careful notes.</p>
+          </article>
+          <article>
+            <strong>Aura</strong>
+            <h3>Personal support layer</h3>
+            <p>The private layer around a person: preferences, needs, goals, boundaries, reminders and care notes.</p>
+          </article>
+          <article>
+            <strong>Avatar</strong>
+            <h3>Public or game-world self</h3>
+            <p>The version of a person, project or group that appears on a website, in a public profile or inside a game world.</p>
+          </article>
+          <article>
+            <strong>Self</strong>
+            <h3>Self-sovereign control</h3>
+            <p>The person or community stays in charge of their own record, permissions, corrections and sharing choices.</p>
+          </article>
+        </div>
+      </section>
 
-        <article class="lane-detail" id="private-profile">
-          <h2>Private profile</h2>
-          <p>A private `profile.md` or `aura.md` can help a person think through identity, preferences, support needs, projects, learning style, AI habits and boundaries. The file belongs to the person first. It can help an AI assistant produce better outputs because the assistant is not guessing from one short prompt.</p>
-          <p>The useful split is public summary versus private context. Public summary might include a role, offer, project or approved bio. Private context can include home, care, health, family, emotional, spiritual, identity or security details that should not be copied into public noticeboards or leaderboards.</p>
-        </article>
+      <section class="choice-lanes" id="choose" aria-labelledby="choose-heading">
+        <div class="section-heading">
+          <h2 id="choose-heading">Choose the lane before you ask AI</h2>
+          <p>The lane tells the file who may see it, what the AI may use, and what needs a human review before anything goes public.</p>
+        </div>
+        <div class="choice-grid">
+          <article class="choice-card private">
+            <span class="choice-icon" aria-hidden="true">01</span>
+            <h3>Keep private</h3>
+            <p>Use this for personal notes, health, home, family, care, identity, spiritual reflection, passwords, private contact details and unfinished feelings.</p>
+            <a href="builder.html">Start a private profile file</a>
+          </article>
+          <article class="choice-card trusted">
+            <span class="choice-icon" aria-hidden="true">02</span>
+            <h3>Share with a trusted group</h3>
+            <p>Use this for a club, project team, care circle, grant group, family group or local working crew where people already know the sharing rules.</p>
+            <a href="guide.html#example">See a small file shape</a>
+          </article>
+          <article class="choice-card notice">
+            <span class="choice-icon" aria-hidden="true">03</span>
+            <h3>Post a public notice</h3>
+            <p>Use this for approved community notices, events, volunteer calls, safety updates, meeting reminders and public-facing summaries.</p>
+            <a href="https://auraofintelligence.github.io/straddie-noticeboard-network/" target="_blank" rel="noopener noreferrer">Visit the Straddie noticeboards</a>
+          </article>
+          <article class="choice-card receipt">
+            <span class="choice-icon" aria-hidden="true">04</span>
+            <h3>Leave a public receipt</h3>
+            <p>Use this for public money, promises, donations, lobbying, conflicts, edits, procurement, decisions, outcomes and corrections.</p>
+            <a href="resources.html#main">Open public-accountability sources</a>
+          </article>
+        </div>
+      </section>
 
-        <article class="lane-detail" id="public-noticeboard">
-          <h2>Public noticeboard</h2>
-          <p>A `public_noticeboard.md` file is a publishing contract. It says what can be shown on a wall screen, kiosk, phone story, event feed or low-power fallback display. It should name the approval owner, public role, source links, expiry rhythm and must-not-publish boundaries.</p>
-          <p>For networks like Straddie noticeboards, the file can help a human and an AI agent turn local events, volunteer calls, safety updates and public-good reminders into clear public notices without dragging private `aura.md` material onto a screen.</p>
-        </article>
+      <section class="straddie-scene" aria-labelledby="straddie-heading">
+        <div class="scene-copy">
+          <h2 id="straddie-heading">A North Stradbroke Island example</h2>
+          <p>A local group wants to organise a working bee, invite volunteers and share an update afterwards. The private file keeps organiser phone numbers, health needs and internal notes. The trusted file helps the small team prepare the day. The public notice tells locals what is happening, where to go and who has approved the message. The receipt records what was promised, what happened and what still needs follow-up.</p>
+          <p>That is the heart of the system. The AI can help draft, shorten, translate, check sources and prepare versions for a wall screen or phone post. People keep the final say.</p>
+        </div>
+        <div class="scene-board" aria-label="North Stradbroke Island Markdown flow">
+          <div class="scene-line"></div>
+          <article>
+            <span>Private</span>
+            <strong>aura.md</strong>
+            <p>Needs, boundaries, helpers, risks and details that stay with the organiser.</p>
+          </article>
+          <article>
+            <span>Trusted</span>
+            <strong>team_brief.md</strong>
+            <p>Run sheet, equipment, volunteer roles and questions for the small group.</p>
+          </article>
+          <article>
+            <span>Public</span>
+            <strong>notice.md</strong>
+            <p>Approved plain-English message for the community noticeboard.</p>
+          </article>
+          <article>
+            <span>Receipt</span>
+            <strong>outcome.md</strong>
+            <p>Dates, decisions, sources, thanks, corrections and next steps.</p>
+          </article>
+        </div>
+      </section>
 
-        <article class="lane-detail" id="game-worlds">
-          <h2>Game worlds and public personas</h2>
-          <p>Game worlds need memory too: settings, values, quests, rules, characters, score systems, rewards and consent rules. Markdown keeps the world bible readable and editable. It can also help separate a playful public avatar from a real private person.</p>
-          <p>For civic games, this matters. A leaderboard can encourage useful action, but it should not expose private life, shame people, or turn care into surveillance. The `.md` layer can record what counts, what does not count, what needs proof and what needs consent.</p>
-        </article>
+      <section class="civic-journey" aria-labelledby="journey-heading">
+        <div class="section-heading">
+          <h2 id="journey-heading">From private aura to public accountability</h2>
+          <p>The wider ecosystem can grow from ordinary files. A personal aura becomes a controlled support layer. A public avatar becomes an approved doorway. A noticeboard becomes a shared memory. A game-world quest becomes a useful civic action. A receipt trail becomes public accountability.</p>
+        </div>
+        <div class="journey-rail">
+          <article>
+            <span>1</span>
+            <h3>Private aura</h3>
+            <p>Write the support layer that helps AI understand the person while the private details stay protected.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Public profile</h3>
+            <p>Choose the short, approved version that can appear on a site, kiosk, app or game world.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Noticeboard</h3>
+            <p>Turn local information into clear public notices with source links and approval notes.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Game-world action</h3>
+            <p>Let an avatar join public-good quests, local challenges, leaderboards or learning worlds with fair rules.</p>
+          </article>
+          <article>
+            <span>5</span>
+            <h3>Public receipt</h3>
+            <p>Record the promise, decision, money, source, correction and result so people can follow the trail.</p>
+          </article>
+        </div>
+        <aside class="p4a-note">
+          <h3>P4A-XYZ in plain English</h3>
+          <p>P4A-XYZ is a working name for a grassroots governance model. It asks communities to protect private life while making public power easier to inspect. The braided economy is the same idea applied to value: care, volunteering, skills, culture, local assets and public money can be recorded in different ways, with the right privacy level for each one.</p>
+        </aside>
+      </section>
 
-        <article class="lane-detail" id="public-ledgers">
-          <h2>Public ledgers</h2>
-          <p>Public ledgers are about receipts, not hype. Public money, public promises, donations, lobbying, conflicts, policy edits, procurement, consultation outcomes, official decisions and corrections all deserve trails people can inspect.</p>
-          <p>Markdown can hold the human-readable layer around a ledger: what happened, who reviewed it, what source supports it, what changed, what remains disputed and where the raw evidence lives. A civic wallet or public ledger should make accountability easier, not make ordinary people more exposed.</p>
-        </article>
+      <section class="civic-links" aria-labelledby="links-heading">
+        <div class="section-heading">
+          <h2 id="links-heading">Useful next doors</h2>
+          <p>Each link opens a practical doorway into the same family of ideas: better Markdown files, clearer AI context, stronger public noticeboards and more careful public records.</p>
+        </div>
+        <div class="link-board">
+          <a class="link-tile" href="builder.html">
+            <span>Make</span>
+            <strong>Build a starter Markdown file</strong>
+            <em>Start with privacy, purpose, sources and a clear AI request.</em>
+          </a>
+          <a class="link-tile" href="guide.html">
+            <span>Learn</span>
+            <strong>Read the plain guide</strong>
+            <em>See the basic shape before you make your own file.</em>
+          </a>
+          <a class="link-tile" href="https://auraofintelligence.github.io/sbt_profile_starter/" target="_blank" rel="noopener noreferrer">
+            <span>Profile</span>
+            <strong>SBT Profile Builder</strong>
+            <em>Create an approved public-facing profile from careful answers.</em>
+          </a>
+          <a class="link-tile" href="https://auraofintelligence.github.io/sbt_aura_builder/" target="_blank" rel="noopener noreferrer">
+            <span>Aura</span>
+            <strong>SBT Aura Builder</strong>
+            <em>Shape the private support layer around a person or project.</em>
+          </a>
+          <a class="link-tile" href="https://auraofintelligence.github.io/straddie-noticeboard-network/" target="_blank" rel="noopener noreferrer">
+            <span>Local</span>
+            <strong>Straddie Noticeboard Network</strong>
+            <em>Connect approved notices to community-facing screens and pages.</em>
+          </a>
+          <a class="link-tile" href="https://auraofintelligence.github.io/p4a_xyz/pages/architecture.html" target="_blank" rel="noopener noreferrer">
+            <span>Civic</span>
+            <strong>P4A-XYZ architecture</strong>
+            <em>Open the deeper architecture behind private life and public receipts.</em>
+          </a>
+        </div>
+      </section>
 
-        <article class="lane-detail" id="p4a">
-          <h2>Braided economy / P4A-XYZ</h2>
-          <p>P4A-XYZ can be treated as a civic memory pattern: people control their identity and consent, while public systems create visible records of power, resources and promises. The point of self-sovereign data, civic wallets and public ledgers is not technology for its own sake. It is memory, receipts and accountability.</p>
-          <p>In a braided economy, a Markdown file can connect people, place, purpose and public proof. It can map a contribution, a local project, a grant milestone, a decision trail, a public-good outcome or a future game-world action without pretending everything belongs in one public database.</p>
-        </article>
-
-        <article class="lane-detail" id="agent-permission">
-          <h2>Agent use is not automatic edit permission</h2>
-          <p>An AI agent can read, route, compare, draft, summarise, ask for missing facts and prepare actions from a Markdown file. That does not mean it should silently rewrite the source record. Editing the file should be a separate permissioned workflow with review, consent and correction rules.</p>
-        </article>
-
+      <section class="civic-closing" aria-label="Civic principle">
+        <p>Write the boundary down first. Then AI can help with the work while people keep control of identity, consent, public notice and public accountability.</p>
         <div class="nav-pair">
           <a class="button secondary" href="builder.html">Build a starter file</a>
           <a class="button ghost" href="resources.html">View research sources</a>
