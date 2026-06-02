@@ -26,6 +26,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
 }
 
 body {
@@ -159,8 +160,8 @@ select {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(7, 17, 26, .96) 0%, rgba(7, 17, 26, .84) 32%, rgba(7, 17, 26, .3) 64%, rgba(7, 17, 26, .14) 100%),
-    linear-gradient(0deg, rgba(7, 17, 26, .78), rgba(7, 17, 26, .08) 44%, rgba(7, 17, 26, .28));
+    linear-gradient(90deg, rgba(7, 17, 26, .96) 0%, rgba(7, 17, 26, .82) 32%, rgba(7, 17, 26, .24) 64%, rgba(7, 17, 26, .06) 100%),
+    linear-gradient(0deg, rgba(7, 17, 26, .62), rgba(7, 17, 26, .04) 44%, rgba(7, 17, 26, .18));
 }
 
 .hero-copy,
@@ -582,43 +583,64 @@ select {
   max-width: 930px;
 }
 
+.audience-strip,
 .civic-intro,
 .choice-lanes,
+.explainer-cards,
 .straddie-scene,
 .civic-journey,
+.ecosystem-map,
 .civic-links,
 .civic-closing {
   width: min(var(--max-width), calc(100% - 2rem));
   margin: 0 auto;
 }
 
+.audience-strip,
 .civic-intro,
 .choice-lanes,
+.explainer-cards,
 .civic-journey,
+.ecosystem-map,
 .civic-links {
   padding: 1rem 0 4.5rem;
 }
 
+.audience-strip,
 .plain-word-grid,
 .choice-grid,
+.explainer-grid,
+.ecosystem-grid,
 .link-board {
   display: grid;
   gap: 1rem;
+}
+
+.audience-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .plain-word-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.audience-strip article,
 .plain-word-grid article,
 .choice-card,
+.explainer-grid article,
 .journey-rail article,
+.ecosystem-grid article,
 .link-tile,
 .p4a-note {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.025));
   box-shadow: 0 16px 42px rgba(0, 0, 0, .16);
+}
+
+.audience-strip article {
+  min-height: 230px;
+  padding: 1.15rem;
 }
 
 .plain-word-grid article {
@@ -653,7 +675,9 @@ select {
 
 .plain-word-grid h3,
 .choice-card h3,
+.explainer-grid h3,
 .journey-rail h3,
+.ecosystem-grid h3,
 .p4a-note h3 {
   margin: 0 0 .45rem;
   font-family: var(--heading);
@@ -661,11 +685,31 @@ select {
   line-height: 1.08;
 }
 
+.audience-strip h2 {
+  margin: 0 0 .65rem;
+  font-family: var(--heading);
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  line-height: 1.05;
+}
+
+.card-label,
+.ecosystem-grid span {
+  display: block;
+  margin-bottom: .8rem;
+  color: var(--cyan);
+  font-family: var(--heading);
+  font-size: .82rem;
+  font-weight: 900;
+}
+
 .plain-word-grid p,
 .choice-card p,
+.audience-strip p,
+.explainer-grid p,
 .scene-copy p,
 .scene-board p,
 .journey-rail p,
+.ecosystem-grid p,
 .p4a-note p,
 .link-tile em,
 .civic-closing p {
@@ -674,6 +718,11 @@ select {
 
 .choice-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.explainer-grid,
+.ecosystem-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .choice-card {
@@ -755,9 +804,39 @@ select {
 
 .choice-card a:hover,
 .choice-card a:focus,
+.explainer-grid a:hover,
+.explainer-grid a:focus,
+.ecosystem-grid a:hover,
+.ecosystem-grid a:focus,
 .link-tile:hover strong,
 .link-tile:focus strong {
   text-decoration: underline;
+}
+
+.explainer-grid article,
+.ecosystem-grid article {
+  min-height: 250px;
+  display: grid;
+  align-content: start;
+  padding: 1.05rem;
+}
+
+.explainer-grid a,
+.ecosystem-grid a {
+  align-self: end;
+  margin-top: 1rem;
+  color: var(--cyan);
+  font-family: var(--heading);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ecosystem-grid article {
+  min-height: 330px;
+}
+
+.ecosystem-grid article:first-child {
+  border-color: rgba(255, 209, 102, .34);
 }
 
 .straddie-scene {
@@ -1124,9 +1203,12 @@ textarea:focus {
   .lane-grid,
   .resource-grid,
   .guide-grid,
+  .audience-strip,
   .plain-word-grid,
   .choice-grid,
+  .explainer-grid,
   .journey-rail,
+  .ecosystem-grid,
   .link-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1177,10 +1259,13 @@ textarea:focus {
   .lane-grid,
   .resource-grid,
   .guide-grid,
+  .audience-strip,
   .plain-word-grid,
   .choice-grid,
+  .explainer-grid,
   .scene-board,
   .journey-rail,
+  .ecosystem-grid,
   .link-board,
   .page-trail,
   .form-grid.two {
@@ -1202,15 +1287,21 @@ textarea:focus {
     height: 48px;
   }
 
+  .audience-strip,
   .civic-intro,
   .choice-lanes,
+  .explainer-cards,
   .civic-journey,
+  .ecosystem-map,
   .civic-links {
     padding-bottom: 3rem;
   }
 
+  .audience-strip article,
   .choice-card,
+  .explainer-grid article,
   .journey-rail article,
+  .ecosystem-grid article,
   .link-tile {
     min-height: auto;
   }
