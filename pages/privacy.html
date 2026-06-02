@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy notes for the How to Use Markdown with AI static builder.">
+    <title>Privacy | How to Use Markdown with AI</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand-mark" href="../index.html"><span class="brand-icon">M</span><span><span>Markdown</span><span>with AI</span></span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div class="nav-links" id="nav-links">
+          <a href="guide.html">Guide</a>
+          <a href="builder.html">Builder</a>
+          <a href="civic-lanes.html">Civic lanes</a>
+          <a href="resources.html">Resources</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="page-main">
+      <section class="page-hero hero-with-media">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../index.html">Back home</a>
+          <h1>Privacy notes.</h1>
+          <p>This site is designed as a static public guide with a browser-local builder. It helps you create a file. It does not need to collect the file.</p>
+        </div>
+        <figure class="page-hero-media">
+          <img src="../assets/privacy-hero.webp" alt="Private local Markdown file protected by a boundary with a separate public receipts trail" width="1536" height="864">
+        </figure>
+      </section>
+
+      <section class="article-stack wide">
+        <article class="article-section">
+          <h2>What happens in the builder</h2>
+          <p>Your form answers are stored in this browser's `localStorage` so the preview can keep working if you move around the page. The generated Markdown is created by JavaScript in the browser. Downloading creates a file on your device. Copying places the text on your clipboard.</p>
+        </article>
+        <article class="article-section">
+          <h2>What this site does not do</h2>
+          <p>The site does not include a database, login, analytics package, contact form, server-side storage or GitHub write action. It does not publish your Markdown file. You control whether you copy, download, edit, share or delete it.</p>
+        </article>
+        <article class="article-section">
+          <h2>What not to type into public tools</h2>
+          <p>Do not type passwords, private keys, bank details, private addresses, sensitive health details, private contact details, protected locations, private photos, unapproved names, cultural material requiring permission or anything you would not want accidentally shared.</p>
+        </article>
+        <article class="article-section">
+          <h2>Before using a file with AI</h2>
+          <p>Read the generated file first. Remove anything sensitive. Label public, private, trusted-only and draft material. When a file affects other people, seek permission before sharing details about them.</p>
+        </article>
+        <div class="nav-pair">
+          <a class="button secondary" href="builder.html">Open builder</a>
+          <a class="button ghost" href="#main">Back to top</a>
+        </div>
+      </section>
+
+      <nav class="page-trail" aria-label="Page navigation">
+        <a href="resources.html"><span>Previous</span><strong>Resources</strong></a>
+        <a href="../index.html"><span>Home</span><strong>Markdown with AI</strong></a>
+        <a href="../index.html"><span>Next</span><strong>Home</strong></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer"><p>Private life stays private. Public power leaves receipts.</p></footer>
+    <button class="to-top" type="button" data-to-top>Top</button>
+    <script src="../script.js"></script>
+  </body>
+</html>

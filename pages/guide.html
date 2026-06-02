@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A step-by-step guide to writing Markdown files that help AI tools produce better, safer and more useful outputs.">
+    <title>Guide | How to Use Markdown with AI</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand-mark" href="../index.html"><span class="brand-icon">M</span><span><span>Markdown</span><span>with AI</span></span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div class="nav-links" id="nav-links">
+          <a href="guide.html" aria-current="page">Guide</a>
+          <a href="builder.html">Builder</a>
+          <a href="civic-lanes.html">Civic lanes</a>
+          <a href="resources.html">Resources</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="page-main">
+      <section class="page-hero hero-with-media">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../index.html">Back home</a>
+          <h1>Write `.md` files that help AI think with you.</h1>
+          <p>Markdown is not magic. It is a simple way to give an AI agent a clean room to work in: what matters, what is private, what needs checking and what output would actually help.</p>
+        </div>
+        <figure class="page-hero-media">
+          <img src="../assets/guide-hero.webp" alt="Markdown guide workbench showing structured notes flowing into clearer AI context" width="1536" height="864">
+        </figure>
+      </section>
+
+      <section class="content-layout">
+        <aside class="side-nav" aria-label="Guide sections">
+          <a href="#shape">Basic shape</a>
+          <a href="#agents">Agent files</a>
+          <a href="#example">Example</a>
+          <a href="#checklist">Checklist</a>
+        </aside>
+
+        <div class="article-stack">
+          <section class="article-section" id="shape">
+            <h2>The basic shape</h2>
+            <p>A strong AI-ready Markdown file usually does six simple jobs. First it names the purpose. Then it gives context. Then it draws privacy boundaries. Then it asks for a clear task. Then it provides source links. Finally it leaves room for review and correction.</p>
+            <div class="guide-grid">
+              <article>
+                <h3>1. Purpose</h3>
+                <p>Tell the AI what this file is for. Keep it plain: "draft a public notice", "prepare a grant question", "map my project", or "summarise a source trail".</p>
+              </article>
+              <article>
+                <h3>2. Context</h3>
+                <p>Add the background that would save a human from asking the first five obvious questions.</p>
+              </article>
+              <article>
+                <h3>3. Boundaries</h3>
+                <p>Name what is public, private, trusted-only, draft, uncertain or not for publication.</p>
+              </article>
+              <article>
+                <h3>4. Request</h3>
+                <p>Ask for one useful next action. A file can hold many notes, but the request should stay crisp.</p>
+              </article>
+              <article>
+                <h3>5. Sources</h3>
+                <p>Links, dates, file names, screenshots and quotes tell the AI what to check before it sounds confident.</p>
+              </article>
+              <article>
+                <h3>6. Review</h3>
+                <p>Add questions, risks, corrections and human approval notes so the output can improve over time.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="article-section" id="agents">
+            <h2>Agent files are Markdown too</h2>
+            <p>Modern AI tools increasingly use Markdown files as instructions, not just notes. `AGENTS.md` can tell a coding agent how to work inside a repo. `SKILL.md` can describe a reusable capability, examples, scripts and guardrails. The important lesson for beginners is simple: a Markdown file can become memory, instructions and workflow in one readable place.</p>
+            <p>That is why form-generated `.md` files matter. A form slows the thinking down just enough to ask better questions. The downloaded file then gives the AI structure it can reuse.</p>
+          </section>
+
+          <section class="article-section" id="example">
+            <h2>Small example</h2>
+            <div class="markdown-window">
+              <div class="window-bar"><span></span><strong>public_noticeboard.md</strong></div>
+              <pre><code>---
+schema: public_noticeboard.v0
+status: draft_for_human_review
+visibility: public_draft
+reviewer: "Human owner or steward"
+---
+
+# Purpose
+Draft a clear public notice about a local event.
+
+## Context
+- The event is family-friendly.
+- The date may change if the weather turns.
+- Contact details need approval before publication.
+
+## Request For AI
+Create three short notice versions:
+1. Wall screen
+2. Phone post
+3. Plain text fallback
+
+## Source Links
+- Official event page
+- Venue update
+
+## Must Not Publish
+- Private phone numbers
+- Names of children
+- Unconfirmed ticket details
+
+## Review Notes
+- Check date and time.
+- Ask organiser before posting.</code></pre>
+            </div>
+          </section>
+
+          <section class="article-section" id="checklist">
+            <h2>Quick checklist</h2>
+            <div class="check-panel">
+              <p><strong>Before you paste a `.md` file into AI, ask:</strong></p>
+              <ul>
+                <li>Does this file say what I want the AI to do?</li>
+                <li>Did I remove secrets, passwords, private contact details and sensitive identity material?</li>
+                <li>Did I label public, private, trusted-only and draft material?</li>
+                <li>Did I include useful dates, links and sources?</li>
+                <li>Did I tell the AI how to handle doubt, corrections and current facts?</li>
+              </ul>
+            </div>
+            <div class="nav-pair">
+              <a class="button secondary" href="builder.html">Next: build a starter file</a>
+              <a class="button ghost" href="#main">Back to top</a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <nav class="page-trail" aria-label="Page navigation">
+        <a href="../index.html"><span>Previous</span><strong>Home</strong></a>
+        <a href="../index.html"><span>Home</span><strong>Markdown with AI</strong></a>
+        <a href="builder.html"><span>Next</span><strong>Builder</strong></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer"><p>Markdown is simple on purpose. The care goes into what you choose to put inside it.</p></footer>
+    <button class="to-top" type="button" data-to-top>Top</button>
+    <script src="../script.js"></script>
+  </body>
+</html>

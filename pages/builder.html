@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create and download a local AI-ready Markdown starter file with privacy, source and review boundaries.">
+    <title>Builder | How to Use Markdown with AI</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body data-builder-page>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand-mark" href="../index.html"><span class="brand-icon">M</span><span><span>Markdown</span><span>with AI</span></span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div class="nav-links" id="nav-links">
+          <a href="guide.html">Guide</a>
+          <a href="builder.html" aria-current="page">Builder</a>
+          <a href="civic-lanes.html">Civic lanes</a>
+          <a href="resources.html">Resources</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="page-main">
+      <section class="page-hero hero-with-media">
+        <div class="page-hero-copy">
+          <a class="back-link" href="../index.html">Back home</a>
+          <h1>Create an AI context starter file.</h1>
+          <p>This builder runs in your browser. It does not send answers to a server. Downloading creates a local Markdown file you can inspect before using with AI.</p>
+        </div>
+        <figure class="page-hero-media">
+          <img src="../assets/builder-hero.webp" alt="Browser-local form transforming into a generated Markdown output panel" width="1536" height="864">
+        </figure>
+      </section>
+
+      <section class="builder-layout" id="builder">
+        <form class="builder-form" data-ai-md-form>
+          <fieldset>
+            <legend>Part A - what this file is for</legend>
+            <label>Working title
+              <input name="title" placeholder="Example: Community notice about library hours">
+            </label>
+            <label>Who or what is this for?
+              <input name="audience" placeholder="Example: Redfern locals, my project team, AI coding agent">
+            </label>
+            <label>Purpose
+              <textarea name="purpose" rows="3" placeholder="What should this file help you think through or ask AI to do?"></textarea>
+            </label>
+            <label>AI request
+              <textarea name="ai_request" rows="3" placeholder="Example: Draft a short public notice in plain Australian English, then list facts that need checking."></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Part B - privacy and consent</legend>
+            <div class="form-grid two">
+              <label>Visibility lane
+                <select name="visibility">
+                  <option value="private">Private</option>
+                  <option value="trusted_only">Trusted-only</option>
+                  <option value="public_draft">Public draft</option>
+                  <option value="public_after_review">Public after review</option>
+                  <option value="ledger_reference">Ledger reference</option>
+                </select>
+              </label>
+              <label>Review status
+                <select name="review_status">
+                  <option value="needs_human_review">Needs human review</option>
+                  <option value="owner_reviewed">Owner reviewed</option>
+                  <option value="source_checked">Source checked</option>
+                  <option value="ready_to_publish">Ready to publish</option>
+                </select>
+              </label>
+            </div>
+            <label>Private or permission-needed material
+              <textarea name="private_boundary" rows="3" placeholder="What should not be copied into public outputs?"></textarea>
+            </label>
+            <label>Consent or correction path
+              <textarea name="consent_path" rows="3" placeholder="Who can approve sharing, correction, updates or withdrawal?"></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Part C - context, sources and output</legend>
+            <label>Context notes
+              <textarea name="context" rows="5" placeholder="Facts, background, goals, constraints, tone, people, place, timing or known uncertainty."></textarea>
+            </label>
+            <label>Source links or file names
+              <textarea name="sources" rows="4" placeholder="One link or source clue per line."></textarea>
+            </label>
+            <label>Output format wanted
+              <textarea name="output_format" rows="3" placeholder="Example: Short summary, checklist, public notice, prompt, page outline, issue list, or code task."></textarea>
+            </label>
+            <label>Review notes and open questions
+              <textarea name="review_notes" rows="4" placeholder="What should a human check before relying on the AI output?"></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Part D - civic lane</legend>
+            <div class="form-grid two">
+              <label>Closest lane
+                <select name="lane">
+                  <option value="private_profile">Private profile</option>
+                  <option value="public_noticeboard">Public noticeboard</option>
+                  <option value="game_world">Game world</option>
+                  <option value="public_ledger">Public ledger</option>
+                  <option value="braided_economy_p4a">Braided economy / P4A</option>
+                  <option value="agent_skill">Agent skill or repo instruction</option>
+                </select>
+              </label>
+              <label>Scale layer
+                <select name="scale_layer">
+                  <option value="L0_private">L0 private self, home or household</option>
+                  <option value="L1_local">L1 local group, crew or project</option>
+                  <option value="L2_public_front">L2 public front, council or regional record</option>
+                  <option value="L3_wider_coordination">L3+ state, national or wider coordination</option>
+                  <option value="fractal">Fractal or context-dependent</option>
+                </select>
+              </label>
+              <label>Suggested file name
+                <input name="filename" placeholder="ai-context-starter.md">
+              </label>
+            </div>
+            <label>Public receipts or accountability notes
+              <textarea name="receipts" rows="3" placeholder="Money, promises, decisions, claims, corrections, conflicts, approvals, version history or public-good outcomes that may need a trail."></textarea>
+            </label>
+          </fieldset>
+
+          <div class="builder-actions">
+            <button class="button primary" type="submit">Update markdown</button>
+            <button class="button secondary" type="button" data-copy-md>Copy markdown</button>
+            <button class="button secondary" type="button" data-download-md>Download .md</button>
+            <button class="button danger" type="button" data-clear-md>Clear answers</button>
+          </div>
+          <p class="status" data-builder-status aria-live="polite">Ready.</p>
+        </form>
+
+        <aside class="output-panel" aria-label="Generated markdown output">
+          <label for="markdown-output">Generated Markdown</label>
+          <textarea id="markdown-output" class="markdown-output" data-md-output spellcheck="false" readonly></textarea>
+        </aside>
+      </section>
+
+      <nav class="page-trail" aria-label="Page navigation">
+        <a href="guide.html"><span>Previous</span><strong>Guide</strong></a>
+        <a href="../index.html"><span>Home</span><strong>Markdown with AI</strong></a>
+        <a href="civic-lanes.html"><span>Next</span><strong>Civic lanes</strong></a>
+      </nav>
+    </main>
+
+    <footer class="site-footer"><p>All answers stay in this browser unless you copy or download them.</p></footer>
+    <button class="to-top" type="button" data-to-top>Top</button>
+    <script src="../script.js"></script>
+  </body>
+</html>
