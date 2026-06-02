@@ -159,8 +159,8 @@ select {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(7, 17, 26, .96) 0%, rgba(7, 17, 26, .86) 34%, rgba(7, 17, 26, .46) 68%, rgba(7, 17, 26, .78) 100%),
-    linear-gradient(0deg, rgba(7, 17, 26, .96), rgba(7, 17, 26, .18) 42%, rgba(7, 17, 26, .56));
+    linear-gradient(90deg, rgba(7, 17, 26, .96) 0%, rgba(7, 17, 26, .84) 32%, rgba(7, 17, 26, .3) 64%, rgba(7, 17, 26, .14) 100%),
+    linear-gradient(0deg, rgba(7, 17, 26, .78), rgba(7, 17, 26, .08) 44%, rgba(7, 17, 26, .28));
 }
 
 .hero-copy,
