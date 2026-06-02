@@ -27,6 +27,11 @@ test.describe("civic lanes page", () => {
     await page.goto("/pages/civic-lanes.html");
     await expect(page).toHaveTitle(/Civic Lanes/);
     await expect(page.locator("body")).toContainText("A North Stradbroke Island example");
+    await expect(page.locator(".audience-strip h2")).toHaveText([
+      "1. Write the private version",
+      "2. Make the useful version",
+      "3. Publish the approved version"
+    ]);
 
     const pageText = await page.locator("body").innerText();
     for (const name of inventedFilenames) {
