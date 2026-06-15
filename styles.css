@@ -458,6 +458,8 @@ select {
   margin: 0;
   padding: 1rem;
   overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   color: #dff6ff;
   font-size: .9rem;
 }
