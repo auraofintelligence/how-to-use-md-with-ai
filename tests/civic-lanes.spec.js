@@ -54,7 +54,8 @@ test.describe("civic lanes page", () => {
       "3. Share the approved version"
     ]);
     await expect(page.locator("body")).toContainText("sovereignty first");
-    await expect(page.locator("body")).toContainText("These public projects are not instructions. They are open doors.");
+    await expect(page.locator("body")).toContainText("Choose a doorway into the ecosystem");
+    await expect(page.locator("body")).toContainText("Start where your own question feels alive.");
 
     const pageText = await page.locator("body").innerText();
     for (const name of inventedFilenames) {
@@ -69,6 +70,15 @@ test.describe("civic lanes page", () => {
     await expect(page.locator(".ecosystem-grid h3")).toHaveText(ecosystemCardOrder);
     await expect(page.locator(".ecosystem-grid article")).toHaveCount(18);
     await expect(page.locator(".ecosystem-grid article .card-actions a")).toHaveCount(36);
+    expect(pageText).not.toContain("Open repo");
+    expect(pageText).not.toContain("Gathers images and links from newer public repos");
+
+    const actionLabels = await page.locator(".ecosystem-grid article .card-actions a").evaluateAll((links) => (
+      links.map((link) => link.textContent.trim())
+    ));
+    expect(actionLabels.filter((label) => label === "Visit page")).toHaveLength(18);
+    expect(actionLabels.filter((label) => label === "See source files")).toHaveLength(18);
+
     await expect(page.locator(".civic-links")).toHaveCount(0);
     await expect(page.locator("body")).not.toContainText("Inside this site");
     await expect(page.locator("body")).not.toContainText("Related Aura of Intelligence project pages");
