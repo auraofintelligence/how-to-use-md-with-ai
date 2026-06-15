@@ -18,16 +18,19 @@ const ecosystemCardOrder = [
   "Profile Builder",
   "Aura Builder",
   "Straddie Noticeboard Network",
-  "Straddie Shared Table",
-  "Straddie Night Market Lab",
-  "Straddie Disaster Kiosks",
+  "Ready S.E.T. Co-op Trust Hub",
   "Stradbroke Grants Lab",
   "Legal Memory Workbench",
-  "Film Club Documentary Builders",
-  "Ready S.E.T. Co-op Trust Hub",
+  "Dunwich (Gumpi) Ferry Terminal Open Data Lab",
+  "Quandamooka Film Festival",
+  "Bees & Allies",
+  "Straddie Headline Open Mic",
+  "Straddie Clean Energy Superpower",
+  "Moreton Bay Community Wealth and Mutuals",
   "Straddie Digital Twin Builders",
-  "Ballow Road Sand and Screen Hub",
-  "Straddie Maker-Space Lab",
+  "Civilisation of Sand",
+  "Sandworm Subterranean Systems",
+  "Aura Systems Image Atlas",
   "Purple Party for Australia",
   "GAJRA Earth public hub"
 ];
@@ -46,10 +49,12 @@ test.describe("civic lanes page", () => {
     await expect(page).toHaveTitle(/Civic Lanes/);
     await expect(page.locator("body")).toContainText("A North Stradbroke Island example");
     await expect(page.locator(".audience-strip h2")).toHaveText([
-      "1. Write the private version",
-      "2. Make the useful version",
-      "3. Publish the approved version"
+      "1. Start with your private version",
+      "2. Shape a useful working version",
+      "3. Share the approved version"
     ]);
+    await expect(page.locator("body")).toContainText("sovereignty first");
+    await expect(page.locator("body")).toContainText("These public projects are not instructions. They are open doors.");
 
     const pageText = await page.locator("body").innerText();
     for (const name of inventedFilenames) {
@@ -62,8 +67,8 @@ test.describe("civic lanes page", () => {
     await expect(page.locator(".scene-board")).toHaveCount(1);
     await expect(page.locator(".scene-board strong")).toHaveText(realStarterFilenames);
     await expect(page.locator(".ecosystem-grid h3")).toHaveText(ecosystemCardOrder);
-    await expect(page.locator(".ecosystem-grid article")).toHaveCount(15);
-    await expect(page.locator(".ecosystem-grid article .card-actions a")).toHaveCount(30);
+    await expect(page.locator(".ecosystem-grid article")).toHaveCount(18);
+    await expect(page.locator(".ecosystem-grid article .card-actions a")).toHaveCount(36);
     await expect(page.locator(".civic-links")).toHaveCount(0);
     await expect(page.locator("body")).not.toContainText("Inside this site");
     await expect(page.locator("body")).not.toContainText("Related Aura of Intelligence project pages");
