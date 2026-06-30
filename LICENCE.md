@@ -1,21 +1,65 @@
-# How to Use Markdown with AI Public Licence
+# Strange But True Public Source Licence
 
-Copyright (c) 2026 Aura of Intelligence.
+Copyright (c) 2026 Luke Nathan Hayes / Strange But True / Aura of Intelligence.
+All rights reserved except as allowed below.
 
-## Your generated Markdown
+This is a plain-language licence for how-to-use-md-with-ai.
 
-Any Markdown files created through this browser-local builder belong to the person who creates them. This site does not claim ownership of visitor outputs and does not store them on a server.
+This is not an open-source licence. It is a public source licence: people can read, learn from and use the work personally, but commercial and corporate rights stay with Luke Nathan Hayes.
 
-## Public guide and code
+## 1. What You Can Do
 
-The website code and educational guide are shared for public-interest, educational, community and civic learning uses. You may view, clone, study and adapt the code for those purposes.
+You may view, share, clone, study, reference and adapt this repo for personal, educational, artistic, research, community or other non-commercial use.
 
-Please keep clear attribution to the original project where practical. Do not use this project name, files, images or related brand assets to imply endorsement without permission.
+You may use a personal AI assistant to help read, explain or adapt the repo for those allowed non-commercial uses.
 
-## Boundaries
+If you use or adapt the work, give clear credit:
 
-Do not use this guide or builder to publish private, sensitive, misleading, unlawful, exploitative or unapproved information about other people.
+Based on how-to-use-md-with-ai by Luke Nathan Hayes / Strange But True / Aura of Intelligence.
+Original project: https://github.com/auraofintelligence/how-to-use-md-with-ai
+Used under the Strange But True Public Source Licence.
 
-## No warranty
+## 2. What You Cannot Do Without Permission
 
-This project is provided as is. It is a learning and civic-memory aid, not legal, financial, medical, political compliance or professional advice.
+You may not use this repo, its code, ideas, text, designs, workflows, data structures, assets, names or close derivatives for commercial, corporate, institutional, government, startup, agency, client or employer purposes without written permission from Luke Nathan Hayes.
+
+That means you may not:
+
+- sell, monetise, repackage, licence, sponsor, advertise with or commercially distribute the work;
+- use it in paid products, SaaS tools, client work, consulting, courses, workshops, dashboards, templates or commercial infrastructure;
+- use it inside a company, agency, startup, institution, government body or funded commercial project;
+- use it for commercial AI training, datasets, embeddings, knowledge bases, agents, model products or evaluation systems;
+- remove attribution or present the work as your own;
+- use Strange But True, Aura of Intelligence, Luke Nathan Hayes, project names, screenshots, music, writing, images or brand material to imply endorsement, partnership or approval.
+
+## 3. Commercial Rights
+
+All commercial rights are reserved to Luke Nathan Hayes.
+
+Commercial use requires written permission from Luke Nathan Hayes. Permission can be granted, denied, limited, priced or handled under a separate agreement.
+
+## 4. Your Own Outputs
+
+If this repo lets you create your own notes, Markdown files, exports, maps, profiles, plans or other personal outputs, those outputs belong to you.
+
+You are responsible for what you put into the tool, what you export, and where you share it.
+
+## 5. Third-Party Material
+
+This licence only covers original material created by Luke Nathan Hayes / Strange But True / Aura of Intelligence.
+
+Third-party libraries, fonts, APIs, platforms, services or embedded material keep their own licences.
+
+## 6. No Harmful Or Misleading Use
+
+You may not use this repo or its material for deceptive, exploitative, aggressive, hateful, harassing, unsafe or harmful purposes.
+
+You may not use it to mislead people about privacy, security, law, finance, health, public safety, governance, crypto, AI capability or current events.
+
+## 7. No Warranty
+
+This repo is provided as-is.
+
+Luke Nathan Hayes / Strange But True / Aura of Intelligence make no warranties and accept no liability for how you use, adapt, interpret, deploy or rely on this material.
+
+Public prototypes are not finished legal, medical, financial, privacy, security, public-safety, governance, crypto, AI-governance or production infrastructure unless Luke Nathan Hayes explicitly says so in writing.
