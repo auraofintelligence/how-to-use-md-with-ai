@@ -14,7 +14,7 @@ Each link below reflects an evidenced family, lineage or direct connection. This
 
 ### Aura Systems Image Atlas source projects
 
-- [aura-systems-image-atlas](https://github.com/auraofintelligence/aura-systems-image-atlas) - [public page](https://auraofintelligence.github.io/aura-systems-image-atlas/) - source project represented in this visual atlas, source project represented in visual atlas.
+- [aura-systems-image-atlas](https://github.com/auraofintelligence/aura-systems-image-atlas) - [public page](https://auraofintelligence.github.io/aura-systems-image-atlas/) - source project represented in this visual atlas.
 - [strange-but-true](https://github.com/auraofintelligence/strange-but-true) - [public page](https://auraofintelligence.github.io/strange-but-true/) - explicit cross-reference.
 - [strange-but-true-ai-trust-index](https://github.com/auraofintelligence/strange-but-true-ai-trust-index) - [public page](https://auraofintelligence.github.io/strange-but-true-ai-trust-index/) - explicit cross-reference, shared tooling suite.
 
